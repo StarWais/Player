@@ -1,0 +1,38 @@
+.Library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(157, 205, 207);
+  box-shadow: 1rem 1rem 50px gray;
+  width: 25%;
+  overflow: scroll;
+  height: 100vh;
+  transition: 0.4s all ease;
+  &__Songs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__Title {
+    margin: 1rem 2rem;
+    text-align: center;
+  }
+  &__Close {
+    position: absolute;
+    cursor: pointer;
+    top: 1rem;
+    right: 1rem;
+    color: rgb(74, 83, 83);
+  }
+  &_Closed {
+    transform: translateX(-100%);
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Library {
+    width: 100vw;
+  }
+}

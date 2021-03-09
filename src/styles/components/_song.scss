@@ -1,0 +1,37 @@
+.Song {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__Cover {
+    width: 30%;
+    border-radius: 50%;
+  }
+  &__Cover_Active {
+    animation: ImageRotate 60s infinite linear;
+  }
+  &__Name {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+  &__Artist {
+    font-size: 1rem;
+  }
+}
+
+@keyframes ImageRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Song {
+    &__Cover {
+      width: 60%;
+    }
+  }
+}

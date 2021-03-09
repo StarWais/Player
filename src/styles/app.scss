@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+h1,
+h2,
+h3 {
+  color: rgb(54, 54, 54);
+}
+
+.App {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  transition: 0.4s all ease;
+  &_Active {
+    margin-left: 25%;
+    background: linear-gradient(to right, #d4e5e7, #ffff);
+  }
+  &__Menu {
+    position: absolute;
+    top: 1rem;
+    right: 4rem;
+    border-radius: 20px;
+    border: 2px solid black;
+    width: 6rem;
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 3rem;
+    text-transform: uppercase;
+    transition: 0.2s all ease;
+    cursor: pointer;
+    font-weight: 400;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+@import "components/player";
+@import "components/song";
+@import "components/songslibrary";
+@import "components/librarysong";
+
+.hidden {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .App {
+    &__Menu {
+      right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.Player {
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 80%;
+  .Time {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-top: 1rem;
+    &__Range {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      background: transparent;
+      cursor: pointer;
+      height: 100%;
+      border: none;
+      width: 100%;
+      &_Animated {
+        position: absolute;
+        background: rgb(204, 204, 204);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translateX(0%);
+        pointer-events: none;
+      }
+    }
+    &__Start,
+    &__End {
+      width: 90px;
+      display: flex;
+      justify-content: center;
+    }
+    &__Track {
+      height: 1rem;
+      width: 100%;
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+  }
+  .Play {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    padding: 1rem;
+    &__Previous,
+    &__Next,
+    &__Play {
+      cursor: pointer;
+      transition: 0.1s all ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-moz-range-thumb {
+  -moz-appearance: none;
+  border: none;
+  width: 0;
+  height: 0;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  width: 0;
+  height: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .Player {
+    width: 90%;
+    .Time {
+      width: 100%;
+    }
+    .Play {
+      width: 80%;
+    }
+  }
+}
