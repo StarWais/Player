@@ -2,6 +2,11 @@ import React, { useState, useRef } from "react";
 import Player from "./components/Player";
 import Song from "./components/Song";
 import SongsLibrary from "./components/SongsLibrary";
+/*
+  По структуре организации стилей:
+  На мой взгляд нет смысла добавлять нижнее подчеркивание вначале названия файла. В случае со сборщиками grunt, gulp это было нужно,
+  чтобы файлики не компилились в отдельные файлы в dist. В react app это не нужно.
+*/
 import "./styles/app.scss";
 import Data from "./util";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
