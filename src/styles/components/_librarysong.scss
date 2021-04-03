@@ -1,6 +1,10 @@
 .LibrarySong {
   cursor: pointer;
   transition: 0.25s all ease;
+  /*
+    Можно использовать npm пакет https://www.npmjs.com/package/bemify
+    для более красивого оформления в стиле BEM
+  */
   &__Cover {
     width: 30%;
     margin-right: 1rem;
